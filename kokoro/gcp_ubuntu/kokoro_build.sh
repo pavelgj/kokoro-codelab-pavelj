@@ -17,3 +17,10 @@ set -e
 # in the job configuration.
 cd "${KOKORO_ARTIFACTS_DIR}/github/kokoro-codelab-pavelj"
 ./build.sh
+
+curl -sL https://firebase.tools | bash
+
+firebase --help
+
+cd "${KOKORO_ARTIFACTS_DIR}/github/firebase-extensions"
+
