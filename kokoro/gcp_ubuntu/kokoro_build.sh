@@ -8,7 +8,7 @@ cd "${KOKORO_ARTIFACTS_DIR}/github/kokoro-codelab-pavelj"
 
 curl -sL https://firebase.tools | bash
 
-echo $GSA_KEY | base64 -D > "${KOKORO_ARTIFACTS_DIR}/gcloud.json"
+echo $GSA_KEY | base64 -d > "${KOKORO_ARTIFACTS_DIR}/gcloud.json"
 export GOOGLE_APPLICATION_CREDENTIALS="$KOKORO_ARTIFACTS_DIR/gcloud.json"
 
 cat "$KOKORO_ARTIFACTS_DIR/gcloud.json"
